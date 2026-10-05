@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --cor-primaria: #0F62FE;
+  --background: 0 0% 100%;
+  --foreground: 222 84% 5%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 84% 5%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 84% 5%;
+  --primary: var(--cor-primaria);
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: var(--cor-primaria);
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Botão primário usa a cor da empresa */
+.btn-primary {
+  background-color: var(--cor-primaria) !important;
+  color: white !important;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Badge de status */
+.badge-enviado { background: #dbeafe; color: #1e40af; }
+.badge-aprovado { background: #dcfce7; color: #166534; }
+.badge-perdido { background: #fee2e2; color: #991b1b; }
+
+/* CSS de impressão */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+  .print-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Scroll suave */
+html { scroll-behavior: smooth; }
+
+/* Input numérico sem spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] { -moz-appearance: textfield; }
